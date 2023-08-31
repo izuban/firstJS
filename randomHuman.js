@@ -19,3 +19,4 @@ class randomHuman {
         return age;
     }
 }
+const human1 = new randomHuman();
