@@ -18,5 +18,9 @@ class randomHuman {
         }
         return age;
     }
+    printInfo () {
+        console.log(`To jest ${this.name}, ${this.surname}, ktory ma ${this.getAge}`)
+    }
 }
 const human1 = new randomHuman();
+console.log(``)
