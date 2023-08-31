@@ -23,4 +23,3 @@ class randomHuman {
     }
 }
 const human1 = new randomHuman();
-console.log(``)
