@@ -1,7 +1,7 @@
 import { faker } from '@faker-js/faker';
 
-class randomHuman {
-    constructor(name, surname, dateOfBirth, height, weight) {
+class RandomHuman {
+    constructor() {
         this.name = faker.person.firstName()
         this.surname = faker.person.lastName()
         this.dateOfBirth = faker.date.birthdate()
@@ -9,17 +9,18 @@ class randomHuman {
         this.weight = faker.number.float({ min: 40, max: 100, precision: 0.001 })
     }
     getAge() {
-        let today = new Date();
-        let birthDate = new Date(this.dateOfBirth);
+        const today = new Date();
+        const birthDate = new Date(this.dateOfBirth);
         let age = today.getFullYear() - birthDate.getFullYear();
-        let m = today.getMonth() - birthDate.getMonth();
+        const m = today.getMonth() - birthDate.getMonth();
         if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
             age--;
         }
         return age;
     }
     printInfo () {
-        console.log(`To jest ${this.name}, ${this.surname}, ktory ma ${this.getAge}`)
+        console.log(`To jest ${this.name}, ${this.surname}, ktory ma ${this.getAge()}`)
     }
 }
-const human1 = new randomHuman();
+const human1 = new RandomHuman();
+const cities = ['Krakow', 'Tokio', 'Barcelona', 'Oslo'];
