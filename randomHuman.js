@@ -24,3 +24,8 @@ class RandomHuman {
 }
 const human1 = new RandomHuman();
 const cities = ['Krakow', 'Tokio', 'Barcelona', 'Oslo'];
+const dictionary = cities.map((city) => {
+    const person = new RandomHuman()
+    return {[person.name]: city}
+}
+)
